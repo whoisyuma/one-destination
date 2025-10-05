@@ -3,6 +3,17 @@
 import { createGroup } from "@/actions/group";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useFormStatus } from "react-dom";
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+    
+  return (
+    <button type="submit" disabled={pending} className="bg-emerald-500 text-white rounded-md py-2 w-2/3">
+      {pending ? '作成中...' : 'グループを作成'}
+    </button>
+  )
+}
 
 export default function CreateGroupForm() {
     const [members, setMembers] = useState<string[]>([]);
@@ -79,9 +90,7 @@ export default function CreateGroupForm() {
           </div>
 
           <div className="flex justify-center">
-            <button type="submit" className="bg-emerald-500 text-white rounded-md py-2 w-2/3">
-              グループを作成
-            </button>
+            <SubmitButton />
           </div>
         </form>
     )
