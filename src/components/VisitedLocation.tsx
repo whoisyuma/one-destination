@@ -42,22 +42,22 @@ export default function VisitedLocation({ groupId, locations }: Props) {
 
     return (
         <div className="mb-5 bg-gray-50 rounded-md p-2">
-            <h2 className="text-xl font-bold mb-8">行った場所</h2>
+            <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-8">行った場所</h2>
             
             {locations.length === 0 ? (
-                <p className="text-gray-500 text-sm mb-5 ml-2">行った場所はまだありません。</p>
+                <p className="text-gray-500 text-xs md:text-sm mb-5 ml-2">行った場所はまだありません。</p>
             ) : (
                 <ul>
                     {locations.map((location) => (
-                        <li key={location.id} className="mb-5 border-b border-gray-400 pb-3">
+                        <li key={location.id} className="mb-3 md:mb-5 border-b border-gray-400 pb-2 md:pb-3">
                             <div className="flex items-center">
                                 <input type="checkbox" checked={location.visited} onChange={() => handleToggle(location.id, location.visited)} className="w-3.5 h-3.5"/>
-                                <span className="font-medium ml-1">
+                                <span className="font-medium text-sm md:text-base ml-1">
                                     {location.name}
                                 </span>
                             </div>
                             <div className="flex justify-between items-center">
-                                <p className="text-sm text-gray-500 mt-0.5 ml-4">追加日：{formatDate(location.createdAt)}</p>
+                                <p className="text-xs md:text-sm text-gray-500 mt-0.5 ml-4">追加日：{formatDate(location.createdAt)}</p>
                                 <button onClick={() => handleDelete(location.id)}>
                                     <img src="/delete-icon.svg" alt="削除ボタン" className="w-5 h-5"/>
                                 </button>
