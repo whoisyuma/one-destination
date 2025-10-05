@@ -1,7 +1,7 @@
 'use server'
 
 import { db } from "@/firebase/config";
-import { addDoc, collection, deleteDoc, doc, serverTimestamp, Timestamp } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
 import { revalidatePath } from "next/cache";
 
 type LocationParams = {

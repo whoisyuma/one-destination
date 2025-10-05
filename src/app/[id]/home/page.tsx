@@ -2,10 +2,10 @@ import AddLocationForm from "@/components/AddLocationForm";
 import UnvisitedLocation from "@/components/UnvisitedLocationList";
 import VisitedLocation from "@/components/VisitedLocation";
 import { db } from "@/firebase/config";
-import { collection, doc, getDoc, getDocs, query, Timestamp, where } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, Timestamp } from "firebase/firestore";
 
 type Props = {
-    params: { id: string }
+    params: Promise<{ id: string }>
 }
 
 async function getGroupData(groupId: string) {
