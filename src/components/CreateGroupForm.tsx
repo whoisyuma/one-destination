@@ -76,9 +76,9 @@ export default function CreateGroupForm() {
               </button>
             </div>
 
-            <div className="flex flex-wrap space-y-2">
+            <div className="flex flex-wrap items-center">
               {members.map((name, index) => (
-                <div key={index} className="flex items-center mr-2 py-1 px-3 border-2 rounded-3xl">
+                <div key={index} className="flex items-center mr-2 py-1 px-3 border-2 rounded-3xl bg-white mb-2">
                   <span className="mr-2">{name}</span>
                   <input type="hidden" name="memberName" value={name}/>
                   <button type="button" onClick={() => removeMember(index)} className="text-xl">

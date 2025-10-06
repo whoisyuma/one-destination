@@ -29,7 +29,7 @@ export default function RootLayout({
       >
 
       {/* ヘッダー */}
-      <header className="w-full p-5 bg-sky-50">
+      <header className="w-full p-5 bg-sky-100">
         <div className="flex justify-center items-end">
           <h1 className="font-bold text-2xl mr-1 text-emerald-500 mt-10">Destination</h1>
         </div>
