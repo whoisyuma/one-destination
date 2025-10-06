@@ -76,7 +76,7 @@ export default function CreateGroupForm() {
               </button>
             </div>
 
-            <div className="flex">
+            <div className="flex flex-wrap space-y-2">
               {members.map((name, index) => (
                 <div key={index} className="flex items-center mr-2 py-1 px-3 border-2 rounded-3xl">
                   <span className="mr-2">{name}</span>
