@@ -1,4 +1,4 @@
-# group行先共有リストアプリ
+# グループ行き先共有アプリ
 > You can find the English version of this README below.
 > この README の英語版は下の方にあります。
 
